@@ -3,28 +3,26 @@
 body {
 	font-family: 'Roboto-Medium', sans-serif;
 }
-
 .content {
 	width: 1440px;
 	margin: 0 auto;
 	> header {
-		height: 50px;
+		height: 260px;
 		background: black;
-		overflow: hidden;
-		> .discount {
-
-		}
-		> ul.tapes {
-			list-style: none;
-			> li {
-				display: block;
-				width: 100%;
-				background: url('../images/tape.png') repeat-x 0 0;
-				&:nth-of-type(1) {
-					
-				}
-			}
-		}
+		background: url('images/header.png') no-repeat 0 0;
+		&:after {
+			display: block;
+			position: absolute;
+			left: 72px;
+			top: 232px;
+			content: '';
+			background: url('images/tape.png') no-repeat 0 0;
+			background-size: cover;
+			transform: rotate(-1deg);
+			width: 1440px;
+    		height: 41px;
+    		z-index: 1;
+		}	
 	}
 	> .top-wrap {
 		position: relative;
@@ -38,41 +36,89 @@ body {
 			width: 100%;
 			height: 100%;
 			content: '';
-			background: url('../images/background.png') no-repeat 0 0;
+			background: url('images/background.png') no-repeat 0 0;
 			background-size: cover;
 			z-index: -1;
 		}
 		> .inner {
 			width: 960px;
 			margin: 0 auto;
+			padding-top: 15px;
+			&:before {
+				display: block;
+				position: absolute;
+				left: -65px;
+				top: 729px;
+				content: '';
+				background: url('images/ballon.png') no-repeat 0 0;
+				background-size: cover;
+				width: 344px;
+	    		height: 317px;
+	    		z-index: 1;
+			}
+			&:after {
+				display: block;
+				position: absolute;
+				left: 1137px;
+				top: 444px;
+				content: '';
+				background: url('images/ballon.png') no-repeat 0 0;
+				background-size: cover;
+				width: 372px;
+	    		height: 342px;
+	    		filter: blur(10px); 
+			}
 			> .text {
-				height: 122px;
+				height: 130px;
 				width: 493px;
 				text-align: center;
 				margin: 0 auto;
 				padding-top: 12px;
 				font-family: 'Muller-ExtraBold-DEMO', sans-serif;
+				&:before {
+					display: block;
+					position: absolute;
+					left: -190px;
+    				top: 18px;
+					content: '';
+					background: url('images/ballon.png') no-repeat 0 0;
+					background-size: cover;
+					width: 440px;
+		    		height: 404px;
+		    		z-index: 1;
+		    		filter: blur(10px);
+				}
+				&:after {
+					display: block;
+					position: absolute;
+					left: 1018px;
+    				top: -65px;
+					content: '';
+					background: url('images/ballon.png') no-repeat 0 0;
+					background-size: cover;
+					width: 250px;
+		    		height: 230px;
+		    		z-index: 2;
+				}
 				> .text-one {
 					color: #FFD600;
 					font-size: 33px;
 				}
 				> .text-two {
-					font-size: 40px;
+					font-size: 48px;
 					text-align: center;
-					line-height: normal;
 					color: white;
 					text-transform: uppercase;
 				}
 				> .text-three {
 					color: #FFD600;
-					font-size: 18px;
+					font-size: 19px;
 				}
 			}
 			> .sale {
 				width: 446px;
 				border: 5px solid #FFD600;
 				margin: 0 auto;
-				line-height: normal;
 				font-size: 30px;
 				text-align: center;
 				text-transform: uppercase;
@@ -85,12 +131,9 @@ body {
 				height: 150px;
 				padding: 13px 10px 0 10px;
 				margin: 20px 55px 0 55px;
-				border: 1px solid #FFFFFF;
+				border: 1px dashed #FFFFFF;
 				box-sizing: border-box;
 				font-family: 'Roboto-Medium';
-				font-style: normal;
-				font-weight: 500;
-				line-height: normal;
 				font-size: 18px;
 				text-align: center;
 				color: #FFFFFF;
@@ -105,31 +148,28 @@ body {
 					flex:1;
 					font-family: 'Roboto-Medium';
 						> .image-1 {
-							background: url('../images/item-1.png') no-repeat 54px 0;
+							background: url('images/item-1.png') no-repeat 54px 0;
 							height: 130px;
 						}
 						> .image-2 {
-							background: url('../images/item-2.png') no-repeat 40px 0;
+							background: url('images/item-2.png') no-repeat 40px 0;
 							height: 130px;
 						}
 						> .image-3 {
-							background: url('../images/item-3.png') no-repeat 43px 27px;
+							background: url('images/item-3.png') no-repeat 43px 27px;
 							height: 130px;
 						}
 						> .image-4 {
-							background: url('../images/item-4.png') no-repeat 46px 14px;
+							background: url('images/item-4.png') no-repeat 46px 14px;
 							height: 130px;
 						}
 						> .image-5 {
-							background: url('../images/item-5.png') no-repeat 58px 0;
+							background: url('images/item-5.png') no-repeat 58px 0;
 							height: 130px;
 						}
 					> .name {
 						padding-top: 12px;
-						font-family: Roboto;
-						font-style: normal;
 						font-weight: 900;
-						line-height: normal;
 						font-size: 14px;
 						text-align: center;
 						color: #FFFFFF;
@@ -138,7 +178,6 @@ body {
 						color: #BDBDBD;
 						font-size: 14px;
 						text-align: center;
-						font-family: 'Roboto-Medium';
 					}
 				}
 			}
@@ -150,28 +189,25 @@ body {
 					list-style: none;
 					flex:1;
 						> .image-6 {
-							background: url('../images/item-6.png') no-repeat 25px 0;
+							background: url('images/item-6.png') no-repeat 25px 0;
 							height: 130px;
 						}
 						> .image-7 {
-							background: url('../images/item-7.png') no-repeat 40px 0;
+							background: url('images/item-7.png') no-repeat 40px 0;
 							height: 130px;
 						}
 						> .image-8 {
-							background: url('../images/item-8.png') no-repeat 21px 14px;
+							background: url('images/item-8.png') no-repeat 21px 14px;
 							height: 130px;
 						}
 						> .image-9 {
-							background: url('../images/item-9.png') no-repeat 46px 0;
+							background: url('images/item-9.png') no-repeat 46px 0;
 							height: 130px;
 						}
 
 					> .name {
 						padding-top: 12px;
-						font-family: Roboto;
-						font-style: normal;
 						font-weight: 900;
-						line-height: normal;
 						font-size: 14px;
 						text-align: center;
 						color: #FFFFFF;
@@ -180,16 +216,11 @@ body {
 						color: #BDBDBD;
 						font-size: 14px;
 						text-align: center;
-						font-family: 'Roboto-Medium';
 					}
 				}
 			}
 			> .conditions {
 				display: flex;
-				font-family:'Roboto-Medium';
-				font-style: normal;
-				font-weight: normal;
-				line-height: normal;
 				font-size: 16px;
 				color: #FFFFFF;
 				height: 100px;
@@ -200,19 +231,19 @@ body {
 				> .left {
 					padding-left: 60px;
 					flex: 1;
-					background: url('../images/box.png') no-repeat 0 0;
+					background: url('images/box.png') no-repeat 0 0;
 					padding-right: 54px;
 				}
 				> .center {
 					padding-left: 60px;
 					flex: 1;
-					background: url('../images/badge.png') no-repeat 0 0;
+					background: url('images/badge.png') no-repeat 0 0;
 					padding-right: 54px;
 				}
 				> .right {
 					padding-left: 60px;
 					flex: 1;
-					background: url('../images/conversation.png') no-repeat 0 0;
+					background: url('images/conversation.png') no-repeat 0 0;
 
 				}
 			}
@@ -226,7 +257,7 @@ body {
 		&:before {
 			display: block;
 			content: '';
-			background: url('../images/background-1.png') no-repeat 0 0;
+			background: url('images/background-1.png') no-repeat 0 0;
 			position: absolute;
 			height: 900px;
 			width: 1440px;
@@ -234,8 +265,7 @@ body {
 			z-index: -1;
 		}
 		> h1 {
-			font-family:'Muller-ExtraBold-DEMO';
-			line-height: normal;
+			font-family: 'Muller-ExtraBold-DEMO', sans-serif;
 			font-size: 50px;
 			text-align: center;
 			text-transform: uppercase;
@@ -251,6 +281,30 @@ body {
 		border-radius: 10px;
 		margin: 0 auto;
 		position: relative;
+		&:before {
+			display: block;
+			position: absolute;
+			left: -240px;
+			top: -126px;
+			content: '';
+			background: url('images/tape.png') no-repeat 0 0;
+			background-size: cover;
+			transform: rotate(1deg);
+			width: 1440px;
+    		height: 41px;
+		}
+			&:after {
+			display: block;
+			position: absolute;
+			left: -240px;
+			top: 609px;
+			content: '';
+			background: url('images/tape.png') no-repeat 0 0;
+			background-size: cover;
+			transform: rotate(-1deg);
+			width: 1440px;
+    		height: 41px;
+		}
 			> .percent {
 				position: absolute;
 				background: @yellow;
@@ -264,6 +318,8 @@ body {
 				top: 27px;
 				left: 8px;
 				z-index: 999;
+				font-size: 40px;
+				font-family: 'Muller-ExtraBold-DEMO', sans-serif;
 				&:before, &:after {
 					content: '';
 					display: block;
@@ -289,32 +345,44 @@ body {
 				display: flex;
 				height: 491px;
 				padding-right: 20px;
+				&:before {
+					display: block;
+					position: absolute;
+					left: -178px;
+					top: 353px;
+					content: '';
+					background: url('images/ballon.png') no-repeat 0 0;
+					background-size: cover;
+					width: 250px;
+		    		height: 230px;
+		    		filter: blur(5px); 
+				}
+				&:after {
+					display: block;
+					position: absolute;
+					left: 837px;
+    				top: 174px;
+					content: '';
+					background: url('images/ballons.png') no-repeat 0 0;
+					background-size: cover;
+					width: 406px;
+		    		height: 425px;
+				}
 				> .left {
 					flex-grow: 1;
 					> .main-image {
 						margin: 33px auto 0 auto;
-						background: url('../images/main1.png') no-repeat 0 0;
-
+						background: url('images/main1.png') no-repeat 0 0;
 						height: 323px;
 					    background-size: contain;
 					    width: 170px;
 					    position: relative;
-					    &:before {
-							display: block;
-							content: '-53%';
-							transform: rotate(45);
-							background: url('../images/rectangle.png') no-repeat 0 0;
-							font-family:'Muller-ExtraBold-DEMO';
-							position: absolute;
-							height: 175px;
-							width: 191px;
-						}
 					}
 					> .images {
 						display: flex;
 						margin: 30px 41px 0 41px;
 						> .image-1 {
-							background: url('../images/img1.png') no-repeat 0 0;
+							background: url('images/img1.png') no-repeat 0 0;
 							width: 75px;
 							height: 75px;
 							background-size: cover;
@@ -322,7 +390,7 @@ body {
 							border-radius: 5px;
 						}
 						> .image-2 {
-							background: url('../images/img1.3.jpg') no-repeat 0 0;
+							background: url('images/img1.3.jpg') no-repeat 0 0;
 							width: 75px;
 							height: 75px;
 							background-size: cover;
@@ -331,7 +399,7 @@ body {
 
 						}
 						> .image-3 {
-							background: url('../images/img1.2.jpg') no-repeat 0 0;
+							background: url('images/img1.2.jpg') no-repeat 0 0;
 							width: 75px;
 							height: 75px;
 							background-size: contain;
@@ -347,12 +415,12 @@ body {
 					width: 1px;
 					height: 425px;
 					left: -30px;
-					    top: 33px;
+					top: 33px;
 					background: #C4C4C4;
 
 					}
 					> h2 {
-					font-family: 'Muller-ExtraBold-DEMO';
+					font-family: 'Muller-ExtraBold-DEMO', sans-serif;
 					line-height: normal;
 					font-size: 30px;
 					color: #000000;
@@ -361,7 +429,6 @@ body {
 					> .text {
 						width: 580px;
 						height: 200px;
-						font-family: 'Roboto-Medium';
 						line-height: normal;
 						font-size: 18px;
 						color: #4F4F4F;
@@ -373,17 +440,14 @@ body {
 						> li {
 						flex: 1;
 						min-width: 210px;
-						font-family:  'Roboto-Medium';
 						line-height: normal;
 						font-size: 18px;
 						color: #000000;
 						margin-top: 27px;
 						list-style: none;
 						padding-left: 34px;
-						background: url('../images/correct-symbol.png') no-repeat 0 0;
-
+						background: url('images/correct-symbol.png') no-repeat 0 0;
 						}
-
 					}
 				}	
 			}
@@ -413,7 +477,6 @@ body {
 						float: left;
 						margin-top: 18px;
 						> .title {
-						font-family:'Roboto-Medium';
 						line-height: normal;
 						font-size: 18px;
 						color: #333333;
@@ -423,7 +486,6 @@ body {
 									color: #333333;
 								}
 							> span {
-								font-family:'Roboto-Medium';
 								line-height: normal;
 								font-size: 30px;
 								color: #000000;
@@ -432,7 +494,6 @@ body {
 						}
 					}
 					> .button {
-						font-family:'Roboto-Medium';
 						display: inline-block;
 						width: 296px;
 						height: 45px;
@@ -449,7 +510,6 @@ body {
 						cursor: pointer;
 					}
 				}
-
 		}
 	}
 }
